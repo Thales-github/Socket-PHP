@@ -6,17 +6,17 @@ $client = new WebSocket\Client("ws://localhost:789");
 $client->text('disparar');
 
 
-// while (true) {
-//     try {
-//         $message = $client->receive();
-//         if ($message) {
+while (true) {
+    try {
+        $message = $client->receive();
+        if ($message) {
 
-//             print_r($message);
-//             echo "\n";
-//         }
-//     } catch (\WebSocket\ConnectionException $e) {
-//         // Possibly log errors
-//         // print_r("Error: " . $e->getMessage());
-//     }
-// }
+            print_r($message);
+            echo "\n";
+        }
+    } catch (\WebSocket\ConnectionException $e) {
+        // Possibly log errors
+        // print_r("Error: " . $e->getMessage());
+    }
+}
 $client->close();
