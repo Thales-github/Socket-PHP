@@ -12,7 +12,7 @@
     <h2 id="mensagemRecebida">Olhe o console!!!</h2>
 
     <script>
-        var conn = new WebSocket('ws://localhost:789');
+        var conn = new WebSocket('ws://192.168.200.231:789');
         conn.onopen = function (e) {
             conn.send('front end conectado!');
         };
